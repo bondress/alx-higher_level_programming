@@ -57,3 +57,12 @@ Write a function that prints the numbers from 1 to 100 separated by a space.
 
 **Task 13**
 Write a function in C that inserts a number into a sorted singly linked list.
+
+**Task 14: 100-print_tebahpla.py**
+Write a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.
+
+**Task 15: 101-remove_char_at.py**
+Write a function that creates a copy of the string, removing the character at the position n (not the Python way, the “C array index”).
+
+**Task 16: 102-magic_calculation.py**
+Write the Python function def magic_calculation(a, b, c): that does exactly the same as the following Python bytecode: https://intranet.alxswe.com/rltoken/BO9a7nq6424lGmtmwyB4cQ
