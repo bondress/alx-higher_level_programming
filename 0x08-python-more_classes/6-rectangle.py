@@ -69,7 +69,7 @@ class Rectangle:
         Shows rectangle with the character #
         """
         if self.__width == 0 or self.__height == 0:
-            return("")
+            return ("")
 
         n_rect = []
         for x in range(self.__height):
