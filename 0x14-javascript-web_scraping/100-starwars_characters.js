@@ -1,15 +1,26 @@
 #!/usr/bin/node
+
 const request = require('request');
-const path = 'https://swapi.co/api/films/' + process.argv[2];
-request(path, function (err, response, body) {
-  if (!err) {
-    const characters = JSON.parse(body).characters;
-    characters.forEach((character) => {
-      request(character, function (err, response, body) {
-        if (!err) {
-          console.log(JSON.parse(body).name);
-        }
-      });
+
+const movId = process.argv[2];
+const path = `https://swapi.dev/api/films/${movId}/`;
+
+request.get(path, (err, response, body) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+
+  const data = JSON.parse(body);
+  const characters = data.characters;
+  for (const character of characters) {
+    request(character, (err, response, body) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      const characterData = JSON.parse(body);
+      console.log(characterData.name);
     });
   }
 });
