@@ -3,7 +3,7 @@ const request = require('request');
 const path = 'https://swapi.dev/api/films/' + process.argv[2];
 request(path, function (err, response, body) {
   if (!err) {
-    let chars = JSON.parse(body).characters;
+    const chars = JSON.parse(body).characters;
     printCharacters(chars, 0);
   }
 });

@@ -3,9 +3,9 @@
 const request = require('request');
 
 const movId = process.argv[2];
-const path = `https://swapi.dev/api/films/${movId}/`;
+const url = `https://swapi-api.alx-tools.com/api/films/${movId}/`;
 
-request.get(path, (err, response, body) => {
+request.get(url, (err, response, body) => {
   if (err) {
     console.log(err);
     return;
@@ -19,8 +19,8 @@ request.get(path, (err, response, body) => {
         console.log(err);
         return;
       }
-      const characterData = JSON.parse(body);
-      console.log(characterData.name);
+      const charData = JSON.parse(body);
+      console.log(charData.name);
     });
   }
 });
